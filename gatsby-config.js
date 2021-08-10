@@ -1,11 +1,3 @@
-/**
- * 👋 Hey there!
- * This file is the starting point for your new WordPress/Gatsby site! 🚀
- * For more information about what this file is and does, see
- * https://www.gatsbyjs.com/docs/gatsby-config/
- *
- */
-
 module.exports = {
   /**
    * Adding plugins to this array adds them to your Gatsby site.
@@ -27,7 +19,8 @@ module.exports = {
       options: {
         // the only required plugin option for WordPress is the GraphQL url.
         url:
-          process.env.WPGRAPHQL_URL
+          process.env.WPGRAPHQL_URL ||
+          `http://ref.test/graphql`,
       },
     },
 
